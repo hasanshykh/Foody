@@ -1,0 +1,45 @@
+<ion-app>
+  
+  <ion-menu side="start">
+    <ion-header>
+      <ion-toolbar>
+      <ion-title>
+        PairBnB
+      </ion-title>
+    </ion-toolbar>
+    </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-menu-toggle>
+        <ion-item routerLink="/places/tabs/discover">
+          <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+          <ion-label>Profile</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <ion-item routerLink="/places/tabs/discover">
+          <ion-icon name="business" slot="start"></ion-icon>
+          <ion-label>Discover</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle><ion-item routerLink="/bookings">
+        <ion-icon name="locate" slot="start"></ion-icon>
+        <ion-label>Near By</ion-label>
+      </ion-item></ion-menu-toggle>
+      <ion-menu-toggle><ion-item (click)="onShare()">
+        <ion-icon name="share-social-outline" slot="start"></ion-icon>
+        <ion-label>Share</ion-label>
+      </ion-item></ion-menu-toggle>
+      <ion-menu-toggle><ion-item routerLink="/about-us">
+        <ion-icon name="information-circle-outline" slot="start"></ion-icon>
+        <ion-label>About us!</ion-label>
+      </ion-item></ion-menu-toggle>
+      <ion-menu-toggle> <ion-item (click)="onLogOut()" button>
+        <ion-icon name="exit" slot="start"></ion-icon>
+        <ion-label>Logout</ion-label>
+    </ion-item></ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+  </ion-menu>
+  <ion-router-outlet main></ion-router-outlet>
+</ion-app>
